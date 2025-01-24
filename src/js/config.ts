@@ -1,3 +1,4 @@
+import { Text } from "kintone-ui-component";
 (function (PLUGIN_ID) {
   const formEl = document.querySelector(".js-submit-settings");
   const cancelButtonEl = document.querySelector(".js-cancel-button");
@@ -5,7 +6,11 @@
   if (!(formEl && cancelButtonEl && messageEl)) {
     throw new Error("Required elements do not exist.");
   }
-
+  const div = document.getElementById("aaa");
+  const text = new Text({
+    label: "まままま",
+  });
+  div?.appendChild(text);
   const config = kintone.plugin.app.getConfig(PLUGIN_ID);
   if (config.message) {
     messageEl.value = config.message;
@@ -22,4 +27,5 @@
   cancelButtonEl.addEventListener("click", () => {
     window.location.href = "../../" + kintone.app.getId() + "/plugin/";
   });
+  console.log("ccc");
 })(kintone.$PLUGIN_ID);
