@@ -8,7 +8,7 @@ import { Text } from "kintone-ui-component";
   }
   const div = document.getElementById("aaa");
   const text = new Text({
-    label: "まままま",
+    label: "あ",
   });
   div?.appendChild(text);
   const config = kintone.plugin.app.getConfig(PLUGIN_ID);
